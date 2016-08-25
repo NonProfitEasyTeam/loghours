@@ -1,14 +1,14 @@
-# Angular 2 Beta Boilerplate
+# Log Hours Application
 
 ## Description
-This repository acts as a very simple Angular 2 Beta Boilerplate with which you can get started developing Angular 2 immediately.
-It is derived from the official Angular 2 Documentation which can be found [here](https://angular.io/docs/ts/latest/quickstart.html).
+This repository simple Log Hours Application with which developing on Angular 2.
+
 ## Usage
-Follow the following steps and you're good to go! Important: Typescript and npm has to be installed on your machine!
+You can track you daily tasks hours by just tapping on "Start" button and when your task done just press "End" button. At the end of the day, you can just click to "Submit Report" button and application will send an email automatically to your project managers.
 
 1: Clone repo
 ```
-git clone https://github.com/mschwarzmueller/angular-2-beta-boilerplate.git
+git clone https://github.com/NonProfitEasyTeam/loghours
 ```
 2: Install packages
 ```
