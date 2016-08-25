@@ -1,2 +1,2 @@
-# ExpenseTracker
-This is test project of using Angular2 for creating expense tracker application.
+# LogHours
+This is test project of using Angular2 for creating log hours tracker application.
