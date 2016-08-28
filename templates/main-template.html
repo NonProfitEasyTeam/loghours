@@ -1,4 +1,11 @@
-<div>
-       <h1>Welcome to Log Hours App</h1>
-        <p>This is an application for tracking your daily hours project wise.</p>
+<div id="wrapper">
+        <header>
+                <nav>
+                                <a [routerLink]="['Home']">Home</a>
+                                <a [routerLink]="['Settings']">Settings</a>
+                </nav>
+        </header>
+        <div id="main">
+                        <router-outlet></router-outlet>
+        </div>
 </div>
