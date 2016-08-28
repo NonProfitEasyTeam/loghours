@@ -53,7 +53,7 @@ gulp.task('build-img', function () {
 
 gulp.task('build-html', function () {
     return gulp.src(appDev + '**/*.html')
-        .pipe(gulp.dest(appProd));
+        .pipe(gulp.dest(appProd)); 
 });
 
 gulp.task('watch', function () {
