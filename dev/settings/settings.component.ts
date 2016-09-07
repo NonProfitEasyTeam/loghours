@@ -8,18 +8,18 @@ import {RouteConfig} from "angular2/router";
     template: `
         <h1>Settings</h1>
         <nav>
-            <a [routerLink]="['Myproject']">My Projects</a>
             <a [routerLink]="['Myaccount']">My Accounts</a>
+            <a [routerLink]="['Myproject']">My Projects</a>
         </nav>
-        <div style="border: 1px solid red;">
+        <div >
             <router-outlet></router-outlet>
         </div>
     `,
     directives:[ROUTER_DIRECTIVES] 
 })
 @RouteConfig([
-    { path: 'myaccount', name:"Myproject", component:MyAccount , useAsDefault:true  },
-    { path: 'myproject', name:"Myaccount", component:ProjectComponent}
+    { path: 'myproject', name:"Myproject", component: ProjectComponent, useAsDefault:true  },
+    { path: 'myaccount', name:"Myaccount", component:MyAccount}
 ])
 export class SettingsComponent {
 
