@@ -1,4 +1,6 @@
-import {Component} from 'angular2/core';
+import {Component, OnInit} from 'angular2/core';
+import {ProjectService} from './project.service';
+import {Project} from './project';
 @Component({
     selector: 'projects',
     template: `
@@ -22,20 +24,20 @@ import {Component} from 'angular2/core';
         .delete{
             color:red;
         }
-    `]
+    `],
+    providers:[ProjectService]
 })
 
-export class ProjectComponent {
-    public Projects = [
-        { id: 1, name: 'Fundly' },
-        { id: 2, name: 'Funldy CRM' },
-        { id: 3, name: 'Fundly Connect' },
-        { id: 4, name: 'Fundly Pro' },
-        { id: 5, name: 'Fundly Enterprise' }
-    ];
+export class ProjectComponent implements OnInit {
+    public Projects: Project[];
     
     public selectedProject = {};
     
+    constructor(private _projectService:ProjectService){}
+
+    ngOnInit():any{
+        this.getProjects();
+    }
     onSelect(project){
         this.selectedProject = project;
     }
@@ -43,5 +45,9 @@ export class ProjectComponent {
     onDelete(project){
         var index = this.Projects.indexOf(project);
         this.Projects.splice(index, 1);
+    }
+
+    getProjects(){
+        this._projectService.getProject().then((Projects: Project[]) => this.Projects = Projects);
     }
 }
