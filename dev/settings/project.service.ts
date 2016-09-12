@@ -1,10 +1,10 @@
 import {Injectable} from "angular2/core";
-import {PROJECTS} from "./project";
+import {PROJECTS, Project} from "./project";
 
 @Injectable()
 
 export class ProjectService {
-    getProject(){
+    getProject() : Promise<Project[]>{
         return Promise.resolve(PROJECTS);
     }
 }
