@@ -1,6 +1,47 @@
+/* start variables here */
+$font-family : "Roboto", Arial, sans-serif;
+$body-color:#cccccc;
+$header-color:#ffffff;
+$nav-color:#1b95e0;
+/* start basic structure classes here */
+html, body, log-hours{
+  height: 100%;
+  }
+  log-hours{
+    display: inline-block;
+    width: 100%;
+  }
 body {
-  padding: 32px;
-  margin: 32px;
-  font-family: "Roboto", Arial, sans-serif;
-  font-size: 18px;
+  padding:0px;
+  margin: 0px;
+  font-family: $font-family;
+  background: $body-color;
+  font-size:100%;
+  }
+#wrapper{
+  
+  display: flex;
+  flex-direction:column;
+  
+   & >  #main{
+       padding: 20px 50px;
+    }
+      & > header{
+        background-color: $header-color;
+          & > nav{
+              display: flex;
+              & > a{
+                flex-grow:1;
+                text-align: center;
+                padding: 20px 0;
+                text-transform: uppercase;
+                text-decoration: none;
+                color: $nav-color;
+                &.router-link-active{
+                  background: $nav-color;
+                  color: #fff;
+                }
+              }
+          }
+      }
 }

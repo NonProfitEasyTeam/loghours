@@ -15,6 +15,7 @@ import {RouteConfig} from "angular2/router";
             <router-outlet></router-outlet>
         </div>
     `,
+    host: {'class' : 'ng-animate settingPage'},
     directives:[ROUTER_DIRECTIVES] 
 })
 @RouteConfig([
